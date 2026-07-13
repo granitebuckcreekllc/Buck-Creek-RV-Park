@@ -285,6 +285,20 @@
 
    gtag('config', 'AW-18311509594');
 </script>
+<!-- Google Ads click conversion tracking: Book appointment & Contact -->
+<script>
+   document.addEventListener('click', function(e) {
+        var link = e.target.closest('a');
+        if (!link) return;
+        var href = link.getAttribute('href') || '';
+
+        if (href.indexOf('https://app.fireflyreservations.com/reserve/') === 0) {
+               gtag('event', 'conversion', {'send_to': 'AW-18311509594/KivLCPHvpM4cENrszZtE'});
+        } else if (href.indexOf('tel:') === 0 || href.indexOf('mailto:') === 0) {
+               gtag('event', 'conversion', {'send_to': 'AW-18311509594/B0DDCPm67c8cENrszZtE'});
+        }
+   });
+</script>
 </head>
 <body>
 
